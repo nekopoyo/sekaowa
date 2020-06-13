@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <script src="components/loader.js"></script>
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/cssua.min.js"></script>
+  <script>
+    function calculate() {
+        var month = $("#month").val();
+        var day = $("#day").val();
+        var text;
+        var result = $("#result").text();
+        swich(month){
+          case "3":
+          if(day <= 21)
+          text= "魚座";
+          else
+          text ="牡羊座";
+          break;
+          case "4":
+          if(day <=19)
+          text="牡羊座";
+          else 
+          text="おうし座";
+          break;
+          case "5":
+          if(day <=20)
+          text="おうし座";
+          else
+          text="ふたご座";
+          break;
+          case "6":
+          if(day <=21)
+          text="ふたご座";
+          else
+          text="かに座";
+          break;
+          case "7":
+          if(day <=22)
+          text="かに座";
+          else
+          text="しし座";
+          break;
+          case "8":
+          if(day <=22)
+          text="しし座";
+          else
+          text="おとめ座";
+          break;
+          case "9":
+          if(day <=22)
+          text="おとめ座";
+          else
+          text="てんびん座";
+          break;
+          case "10":
+          if(day <=23)
+          text="てんびん座";
+          else
+          text="さそり座";
+          break;
+          case "11":
+          if(day <=22)
+          text="さそり座";
+          else
+          text="いて座";
+          break;
+          case "12":
+          if(day <=21)
+          text="いて座";
+          else
+          text="やぎ座";
+          break;
+          case "1":
+          if(day <=19)
+          text="やぎ座";
+          else
+          text="みずがめ座";
+          break;
+          case "2":
+          if(day <=18)
+          text="みずがめ座";
+          else
+          text="魚座";
+          break;
+        } 
+        .text(+text+);
+    }
+    }
+  </script>
+</head>
+<body>
+  <div data-role="page" id="TopPage"> 
+    <header data-role="header" data-position="fixed" data-theme="c">
+      <h1>星座判定</h1>
+    </header>
+      <section data-role="content">
+
+        月
+        <input type="text" id="month" class="input-text">
+        
+        日l
+        <input type="text" id="day" class="input-text">
+
+        <a class="button" onclick="calculate();">判定</a>
+        <div id="result"></div>
+    </section>
+  </div> 
+</body>
+</html>
